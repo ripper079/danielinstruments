@@ -1,0 +1,145 @@
+
+:root {
+    /* Color variables */
+    
+    /* For total app*/
+	--background-color-app: #222222;    
+    
+    /* Color for calculator */
+    
+    /* Main background */
+    --calc-background-color: #3B4664;
+
+    /* Brand */
+    --brand-text-color: #fefefe;
+    
+    /* Output display */
+    --display-background-color: #181F32;
+    --display-text-color: #fefefe;
+
+    /* Bakground color for only buttons */
+    --allbuttons-background-color: #262C43;
+
+    /* Button colors Numerical */    
+    --numpad-button-bakground-color: #E9E3DB;
+    --numpad-button-text-color: #666B71;
+
+    /* Button colors operands */    
+    --operand-button-bakground-color: #E9E3DB;
+    --operand-button-text-color: #666B71;
+
+    /* Button(s) colors delete operations */ 
+    --delete-button-bakground-color: #647299;
+    --delete-button-text-color: #fefefe;
+
+    /* Button color for calculate*/
+    --calculate-button-bakground-color: #D13F30;
+    --calculate-button-text-color: #fefefe;
+
+    /* Prospect for removal */
+    --color-white: #fefefe;    
+
+    /* Hover colors */
+    --hover-numpadAndOperand-button-color: #3210f3;
+    --hover-deleteAndCalculate-button-color: Gold;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: monospace;
+    font-size: 1.5rem; 
+
+    background-color: var(--background-color-app);    
+}
+
+#resultdisplay {
+    color: var(--display-text-color);
+    background-color: var(--display-background-color);    
+}
+
+.container-calculator {
+    background-color: var(--calc-background-color);
+
+    padding: 30px;
+    border: 3px solid var(--color-white);
+    border-radius: 10px;
+
+    /* Following 2 lines centers the page */
+    width: 400px;
+    margin: auto;
+
+}
+
+.numbutton {
+    background-color: var( --numpad-button-bakground-color);
+    color: var(--numpad-button-text-color);
+}
+
+.operandbutton {
+    background-color: var( --operand-button-bakground-color);
+    color: var(--operand-button-text-color);
+}
+
+.delbutton {
+    background-color: var( --delete-button-bakground-color);
+    color: var(--delete-button-text-color);
+}
+
+#calculatebutton {
+    background-color: var(--calculate-button-bakground-color);
+    color: var(--calculate-button-text-color);
+}
+
+#container-buttons {
+    padding: 16px;
+    margin-top: 10px;
+    
+    border-radius: 4px;
+    background-color: var(--allbuttons-background-color);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.button {
+    border-radius: 4px;
+    text-align: center;
+    /* 'Disables selection of 'button' */
+    cursor: default;
+}
+
+.button:nth-of-type(17) {    
+    grid-column: 1 / 3;
+}
+
+.button:last-of-type {        
+    grid-column: 3 / 5;
+}
+
+#brandName {
+    text-align: left;
+    color: var(--brand-text-color);
+}
+
+#resultdisplay {
+    padding: 10px;
+    border-radius: 4px;
+    text-align: right;
+}
+
+/* Interactive effects*/
+.numbutton:hover, .operandbutton:hover {
+    color: var(--hover-numpadAndOperand-button-color);
+}
+
+.delbutton:hover, #calculatebutton:hover {
+    color: var(--hover-deleteAndCalculate-button-color);
+}
